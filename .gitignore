@@ -24,3 +24,9 @@ Downloads
 work
 .Xauthority
 .bash_history
+at.gpg
+.config/pulse
+.oh-my-zsh
+.ssh
+git-credential-manager-bin
+.gitconfig
