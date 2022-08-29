@@ -1,0 +1,7 @@
+[user]
+	email = mail@kruegerfelix.de
+	name = Felix Krueger
+[core]
+	editor = nvim
+[credential]
+	helper = manager
