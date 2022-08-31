@@ -11,11 +11,15 @@ source $HOME/.config/nvim/config/autocmd.vim
 
 call plug#begin()
 
+" package installer
+Plug 'williamboman/mason.nvim'
+
 " vim enhancements
 Plug 'editorconfig/editorconfig-vim'
-Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-expand-region'
-
+Plug 'ggandor/lightspeed.nvim'
+Plug 'smithbm2316/centerpad.nvim'
+Plug 'windwp/nvim-autopairs'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -34,6 +38,8 @@ Plug 'ryanoasis/vim-devicons'
 
 " Color Theme
 Plug 'arcticicestudio/nord-vim'
+Plug 'rakr/vim-one'
+Plug 'projekt0n/github-nvim-theme'
 
 " UI Adjustments
 Plug 'itchyny/lightline.vim'
@@ -49,7 +55,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 
 " Snippet completion source for nvim-cmp
 Plug 'hrsh7th/cmp-vsnip'
-
+Plug 'dcampos/nvim-snippy'
 " Other usefull completion sources
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
@@ -72,10 +78,16 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/lsp_extensions.nvim'
 call plug#end()
 
-colorscheme nord
+colorscheme github_dimmed
+" set background=dark
 
 source $HOME/.config/nvim/config/lsp.vim
 
+lua << EOF
+require("nvim-autopairs").setup {}
+
+require("mason").setup {}
+EOF
 
 " vp doesn't replace paste buffer
 function! RestoreRegister()
@@ -90,3 +102,4 @@ vmap <silent> <expr> p <sid>Repl()
 
 nnoremap <CR> G
 nnoremap <BS> gg
+
