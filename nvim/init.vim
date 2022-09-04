@@ -76,6 +76,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'nvim-lua/lsp_extensions.nvim'
+
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
 call plug#end()
 
 colorscheme github_dimmed
@@ -103,3 +108,11 @@ vmap <silent> <expr> p <sid>Repl()
 nnoremap <CR> G
 nnoremap <BS> gg
 
+" Configure vim-svelte
+let g:svelte_preprocessor_tags = [
+			\ {'name': 'ts', 'tag': 'script', 'as': 'typescript'}
+			\ ]
+let g:svelte_preprocessors = ['typescript', 'ts', 'scss']
+
+" fzf ignore all files in gitignore
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
