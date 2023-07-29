@@ -2,10 +2,6 @@ inoremap jk <ESC>
 
 nmap <leader>w :w<CR>
 
-
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-n>f :NERDTreeFind<CR>
-
 " copy buffer contents to system clipboard
 vmap <Leader>y "+y
 vmap <Leader>d "+d
@@ -13,10 +9,6 @@ nmap <Leader>p "+p
 nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
-
-" hit v for expansion of selection
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
 
 " search for /something
 " hit cs to replace match and hit <ESC>
@@ -26,15 +18,6 @@ vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
 omap s :normal vs<CR>
 
 noremap gV `[v`]
-
-map <C-p> :Files<CR>
-nmap <leader>p :Buffers<CR>
-
-" rust
-let g:rustfmt_autosave = 1
-let g:rustfmt_emit_files = 1
-let g:rustfmt_fail_silently = 0
-let g:rust_clip_command = 'xclip -selection clipboard'
 
 " Ctrl+h to stop searching
 vnoremap <C-h> :nohlsearch<cr>
@@ -54,15 +37,6 @@ map L $
 " ,c will copy entire buffer into clipboard
 noremap <leader>v :read !xsel --clipboard --output<cr>
 noremap <leader>c :w !xsel -ib<cr><cr>
-
-" <leader>s for Rg search
-noremap <leader>s :Rg
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
 
 function! s:list_cmd()
   let base = fnamemodify(expand('%'), ':h:.:S')
