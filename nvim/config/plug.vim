@@ -82,7 +82,7 @@ Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 call plug#end()
 
-colorscheme github_dimmed
+colorscheme github_dark_dimmed
 
 lua << EOF
 require("nvim-autopairs").setup {}
