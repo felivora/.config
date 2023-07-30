@@ -15,9 +15,7 @@ Plug 'williamboman/mason.nvim'
 
 " vim enhancements
 Plug 'editorconfig/editorconfig-vim'
-Plug 'terryma/vim-expand-region'
 Plug 'ggandor/lightspeed.nvim'
-Plug 'smithbm2316/centerpad.nvim'
 Plug 'windwp/nvim-autopairs'
 
 " GUI enhancements
@@ -40,17 +38,11 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
 Plug 'projekt0n/github-nvim-theme'
 
-" UI Adjustments
-Plug 'itchyny/lightline.vim'
-
 " Collection of common configurations for the Nvim LSP client
 Plug 'neovim/nvim-lspconfig'
 
 " Completion framework
 Plug 'hrsh7th/nvim-cmp'
-
-" LSP completion source for nvim-cmp
-Plug 'hrsh7th/cmp-nvim-lsp'
 
 " Snippet completion source for nvim-cmp
 Plug 'hrsh7th/cmp-vsnip'
