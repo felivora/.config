@@ -27,9 +27,6 @@ omap s :normal vs<CR>
 
 noremap gV `[v`]
 
-map <C-p> :Files<CR>
-nmap <leader>p :Buffers<CR>
-
 " rust
 let g:rustfmt_autosave = 1
 let g:rustfmt_emit_files = 1
@@ -56,7 +53,6 @@ noremap <leader>v :read !xsel --clipboard --output<cr>
 noremap <leader>c :w !xsel -ib<cr><cr>
 
 " <leader>s for Rg search
-noremap <leader>s :Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --color=always '.shellescape(<q-args>), 1,

@@ -148,3 +148,9 @@ END
 " Enable type inlay hints
 autocmd CursorHold,CursorHoldI *.rs :lua require'lsp_extensions'.inlay_hints{ only_current_line = true }
 
+
+" Configure vim-svelte
+let g:svelte_preprocessor_tags = [
+			\ {'name': 'ts', 'tag': 'script', 'as': 'typescript'}
+			\ ]
+let g:svelte_preprocessors = ['typescript', 'ts', 'scss']
